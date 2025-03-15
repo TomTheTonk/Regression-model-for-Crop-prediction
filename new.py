@@ -30,7 +30,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_
 
 # Check if CUDA (GPU) is available
 device = "/GPU:0" if tf.config.experimental.list_physical_devices('GPU') else "/CPU:0"
-
+print(device)
 # Run on GPU (if available)
 with tf.device(device):  
     # Define MLP Model for Regression
