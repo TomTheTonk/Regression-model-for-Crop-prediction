@@ -68,16 +68,19 @@ with tf.device(device):
     
     model = keras.Sequential([
         Input(shape=(X_train.shape[1],)),  
-        Dense(256),  # Dense layer with 128 units
+        Dense(256), 
         BatchNormalization(),  # Batch Normalization
         ReLU(),  # ReLU activation
-        Dense(128),  # Dense layer with 64 units
+        Dense(128),  
         BatchNormalization(),  # Batch Normalization
         ReLU(),  # ReLU activation
-        Dense(64),  # Dense layer with 32 units
+        Dense(64),  
         BatchNormalization(),  # Batch Normalization
         ReLU(),  # ReLU activation
-        Dense(1)  # Output layer for regression (no activation)
+        Dense(32),  
+        BatchNormalization(),  # Batch Normalization
+        ReLU(),  # ReLU activation
+        Dense(1)  # Output layer 
     ])
 
     optimizer = Adam(learning_rate=learning_rate)
@@ -90,8 +93,8 @@ with tf.device(device):
 model.save("crop_yield_model.keras")
 #model = keras.models.load_model("crop_yield_model.keras")
 
-train_mse = history.history['loss']  
-val_mse = history.history['val_loss']  
+train_mse = history.history['mae']  
+val_mse = history.history['val_mae']  
 
 # Plot MSE over epochs
 plt.figure(figsize=(8, 5))
@@ -107,14 +110,21 @@ plt.show()
 
 y_pred = model.predict(X_test)
 ape = np.abs((y_pred.flatten() - y_test) / y_test) * 100  
-within_10_percent = np.sum(ape <= 10)  
+within_10_percent = np.sum(ape <= 10) 
+within_20_percent = np.sum(ape <= 20) 
+percentage_within_20 = (within_20_percent / len(y_test)) * 100 
 percentage_within_10 = (within_10_percent / len(y_test)) * 100
 
 print(f"Percentage of predictions within 10% of actual: {percentage_within_10:.2f}%")
 if percentage_within_10 >= 80:
     print("80% accuracy within 10% threshold")
 else:
-    print("No 80% accuracy within 10%") 
+    print("No 80% accuracy within 10%")
+print(f"Percentage of predictions within 20% of actual: {percentage_within_20:.2f}%")
+if percentage_within_20 >= 80:
+    print("80% accuracy within 20% threshold")
+else:
+    print("No 80% accuracy within 20%")  
 # df.hist(bins=50, figsize =(20,10))
 # plt.show()
 #sns.scatterplot(x='Rainfall_mm',

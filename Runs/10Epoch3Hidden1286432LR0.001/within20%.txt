@@ -1,0 +1,25 @@
+Epoch 1/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 17s 566us/step - loss: 0.8527 - mae: 0.5989 - val_loss: 0.2602 - val_mae: 0.4066
+Epoch 2/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 554us/step - loss: 0.2806 - mae: 0.4228 - val_loss: 0.2579 - val_mae: 0.4052
+Epoch 3/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 555us/step - loss: 0.2738 - mae: 0.4172 - val_loss: 0.2534 - val_mae: 0.4014
+Epoch 4/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 565us/step - loss: 0.2708 - mae: 0.4151 - val_loss: 0.2519 - val_mae: 0.4003
+Epoch 5/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 562us/step - loss: 0.2684 - mae: 0.4133 - val_loss: 0.2659 - val_mae: 0.4113
+Epoch 6/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 566us/step - loss: 0.2683 - mae: 0.4135 - val_loss: 0.2513 - val_mae: 0.3998
+Epoch 7/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 560us/step - loss: 0.2676 - mae: 0.4128 - val_loss: 0.2519 - val_mae: 0.4002
+Epoch 8/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 564us/step - loss: 0.2674 - mae: 0.4124 - val_loss: 0.2515 - val_mae: 0.3999
+Epoch 9/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 558us/step - loss: 0.2672 - mae: 0.4124 - val_loss: 0.2513 - val_mae: 0.3998
+Epoch 10/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 16s 564us/step - loss: 0.2650 - mae: 0.4107 - val_loss: 0.2512 - val_mae: 0.4000
+3125/3125 ━━━━━━━━━━━━━━━━━━━━ 1s 332us/step - loss: 0.2489 - mae: 0.3984
+Test Mean Absolute Error: 0.4000 tons per hectare
+3125/3125 ━━━━━━━━━━━━━━━━━━━━ 1s 263us/step 
+Percentage of predictions within 10% of actual: 87.87%
+No 90% accuracy within 10%

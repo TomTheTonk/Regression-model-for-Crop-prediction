@@ -1,0 +1,54 @@
+RangeIndex: 1000000 entries, 0 to 999999
+Data columns (total 10 columns):
+ #   Column                  Non-Null Count    Dtype  
+---  ------                  --------------    -----  
+ 0   Region                  1000000 non-null  object 
+ 1   Soil_Type               1000000 non-null  object 
+ 2   Crop                    1000000 non-null  object 
+ 3   Rainfall_mm             1000000 non-null  float64
+ 4   Temperature_Celsius     1000000 non-null  float64
+ 5   Fertilizer_Used         1000000 non-null  bool   
+ 6   Irrigation_Used         1000000 non-null  bool   
+ 7   Weather_Condition       1000000 non-null  object 
+ 8   Days_to_Harvest         1000000 non-null  int64  
+ 9   Yield_tons_per_hectare  1000000 non-null  float64
+dtypes: bool(2), float64(3), int64(1), object(4)
+memory usage: 62.9+ MB
+/CPU:0
+Epoch 1/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 39s 1ms/step - loss: 0.9848 - mae: 0.6191 - val_loss: 0.2589 - val_mae: 0.4057
+Epoch 2/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 38s 1ms/step - loss: 0.2812 - mae: 0.4230 - val_loss: 0.2542 - val_mae: 0.4023
+Epoch 3/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 38s 1ms/step - loss: 0.2754 - mae: 0.4185 - val_loss: 0.2538 - val_mae: 0.4019
+Epoch 4/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 36s 1ms/step - loss: 0.2720 - mae: 0.4161 - val_loss: 0.2575 - val_mae: 0.4047
+Epoch 5/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 37s 1ms/step - loss: 0.2693 - mae: 0.4138 - val_loss: 0.2528 - val_mae: 0.4010
+Epoch 6/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 36s 1ms/step - loss: 0.2690 - mae: 0.4137 - val_loss: 0.2535 - val_mae: 0.4014
+Epoch 7/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 37s 1ms/step - loss: 0.2682 - mae: 0.4129 - val_loss: 0.2536 - val_mae: 0.4015
+Epoch 8/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 37s 1ms/step - loss: 0.2693 - mae: 0.4140 - val_loss: 0.2533 - val_mae: 0.4013
+Epoch 9/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 36s 1ms/step - loss: 0.2682 - mae: 0.4132 - val_loss: 0.2536 - val_mae: 0.4017
+Epoch 10/10
+28125/28125 ━━━━━━━━━━━━━━━━━━━━ 36s 1ms/step - loss: 0.2680 - mae: 0.4129 - val_loss: 0.2507 - val_mae: 0.3993
+3125/3125 ━━━━━━━━━━━━━━━━━━━━ 2s 589us/step - loss: 0.2485 - mae: 0.3978
+Test Mean Absolute Error: 0.3993 tons per hectare
+2025-04-07 18:05:23.810 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:05:24.117 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:05:30.170 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:05:33.460 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:05:37.050 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:05:39.120 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:06:29.543 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:06:34.431 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:06:37.114 python[14568:536126] +[CATransaction synchronize] called within transaction
+2025-04-07 18:06:42.889 python[14568:536126] +[CATransaction synchronize] called within transaction
+3125/3125 ━━━━━━━━━━━━━━━━━━━━ 2s 475us/step 
+Percentage of predictions within 10% of actual: 62.46%
+No 80% accuracy within 10%
+Percentage of predictions within 20% of actual: 87.98%
+80% accuracy within 20% threshold
